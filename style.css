@@ -19,12 +19,11 @@ body {
 
 a.headline {
     font-size: 5rem;
-    font-family: 'Fira Mono', monospace;
 }
 
 a.sub {
     font-size: 1.2rem;
-
+    color: rgba(235, 235, 235, 0.747);
 }
 
 div.jumbotron {
