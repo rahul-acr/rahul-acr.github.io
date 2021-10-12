@@ -14,7 +14,26 @@ body {
 
 .landing-tile {
     background-color: rgb(176, 100, 226);
+    animation: changePurpleBackground 5s infinite alternate;
     color: white;
+}
+
+@keyframes changePurpleBackground {
+    from {
+        background-color: rgb(176, 100, 226);
+    }
+    to {
+        background-color: rgb(152, 40, 226);
+    }
+}
+
+@keyframes changePurpleForeground {
+    from {
+        color: rgb(176, 100, 226);
+    }
+    to {
+        color: rgb(152, 40, 226);
+    }
 }
 
 a.headline {

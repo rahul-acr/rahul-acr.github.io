@@ -17,7 +17,8 @@
     <div class="tile center-tile landing-tile">
         <div class="jumbotron">
             <a class="headline">Hi, I'm Rahul</a><br>
-            <a class="sub">#Technology_Consultant #Software_Engineer #Linux_Enthusiast #Blogger #Photographer
+            <a id="about-tags" class="sub">#Technology_Consultant #Software_Engineer #Linux_Enthusiast #Blogger
+                #Photographer
                 #Accidental_Sketch_Artist</a>
         </div>
     </div>
@@ -71,13 +72,42 @@
     <div class="tile center-tile ">
         <div style="width: 100%;">
             <center>
-                <a href="https://medium.com/@rahul-saha"><div class="social-link">Medium</div></a>
-                <a href="https://github.com/rahul-acr"><div class="social-link">Github</div></a>
-                <a href="https://www.linkedin.com/in/rahul-acr/"><div class="social-link">LinkedIn</div></a>
-                <a href="https://www.instagram.com/rahul.lens_bearer/"><div class="social-link">Instagram</div></a>
+                <a href="https://medium.com/@rahul-saha">
+                    <div class="social-link">Medium</div>
+                </a>
+                <a href="https://github.com/rahul-acr">
+                    <div class="social-link">Github</div>
+                </a>
+                <a href="https://www.linkedin.com/in/rahul-acr/">
+                    <div class="social-link">LinkedIn</div>
+                </a>
+                <a href="https://www.instagram.com/rahul.lens_bearer/">
+                    <div class="social-link">Instagram</div>
+                </a>
             </center>
         </div>
     </div>
 </body>
+<script>
+    const tagsText = '#Technology_Consultant #Software_Engineer #Linux_Enthusiast #Blogger #Photographer #Accidental_Sketch_Artist'
+    var tagsId = document.getElementById('about-tags')
+    var tagLength = 0
+    var waitCount = 0
+    var intervalId = setInterval(() => {
+        if (tagsText[tagLength - 1] == ' ' && waitCount < 5) {
+            console.log('skipping')
+            waitCount += 1
+            return
+        }
+        waitCount = 0
+        tagsId.textContent = tagsText.substring(0, tagLength)+'_'
+        console.log('updating...')
+        if (tagLength == tagsText.length) {
+            clearInterval(intervalId)
+            tagsId.textContent = tagsText
+        }
+        tagLength += 1
+    }, 100)
+</script>
 
 </html>
