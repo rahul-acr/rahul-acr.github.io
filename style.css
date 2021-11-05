@@ -66,7 +66,7 @@ div.jumbotron {
 }
 
 .sub-text {
-    color: grey;
+    color: gray;
 }
 
 .row {
@@ -74,6 +74,14 @@ div.jumbotron {
     width: 100%;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.col{
+    width: 40%;
+}
+
+p{
+    color: darkgray;
 }
 
 .experience {
@@ -141,5 +149,8 @@ a {
         flex-direction: column;
     }
     
+    .col{
+        width: 100%;
+    }
     
 }
