@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Glory:wght@400;500&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        .container {
+            width: 80%;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+        }
+
+        .art-card {
+            width: 100%;
+            height: 70vh;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 2em;
+            margin-bottom: 6em;
+        }
+
+
+        .art-card:nth-child(odd) {
+            transform: rotate(2deg);
+            flex-direction: row-reverse;
+        }
+
+
+        .art-card:nth-child(even) {
+            transform: rotate(-2deg);
+        }
+
+        .art-card>p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+        }
+
+        .art-card>img {
+            height: 100%;
+            border: 5px solid white;
+            box-shadow: 0em 0em 10px rgb(104, 104, 104);
+        }
+
+        @media only screen and (max-width: 768px) {
+            .art-card {
+                flex-direction: column;
+            }
+
+            .art-card:nth-child(odd) {
+                transform: rotate(0deg);
+                flex-direction: column;
+            }
+
+            .art-card:nth-child(even) {
+                transform: rotate(0deg);
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .art-card>img {
+                width: 80%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center-tile">
+        <div class="container">
+            <center>
+                <h1>Thank you showing interest in my art</h1>
+            </center>
+            <br><br>
+            <div class="artworks">
+                <div class="art-card">
+                    <img src="drawings/sad_girl.jpg">
+                    <p>Portrait of a sad girl.</p>
+                </div>
+                <div class="art-card">
+                    <img src="drawings/mayabi.jpg">
+                    <p>Thoughtful girl.</p>
+                </div>
+                <div class="art-card">
+                    <img src="drawings/dean.jpg">
+                    <p>Jensen Ackles</p>
+                </div>
+                <div class="art-card">
+                    <img src="drawings/tiger.jpg">
+                    <p>Royal Bengal Tiger.</p>
+                </div>
+                <div class="art-card">
+                    <img src="drawings/chloe1.jpg">
+                    <p>Chloe Grace Moretz.</p>
+                </div>
+                <div class="art-card">
+                    <img src="drawings/bengali_woman.jpg">
+                    <p>Anamika.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
